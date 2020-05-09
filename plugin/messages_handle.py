@@ -131,6 +131,7 @@ class MessagesHandle():
                             batch_payload.append(postdata)
                         # if batch_payload:    
                         publish_batch(batch_payload)     
+                        time.sleep(5)
                         disconnection(client_id) 
                     elif client_id != SPECIAL_CLIENT_ID and topic_resume:
                         time.sleep(3)
